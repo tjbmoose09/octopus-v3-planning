@@ -10,6 +10,9 @@ on:
 permissions:
   contents: read
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   simulation-smoke:
     name: Simulation smoke test
@@ -56,4 +59,3 @@ jobs:
             results/v3_memory_simulation_results.json
             results/v3_memory_simulation_runs.jsonl
             docs/SIMULATION_RESULTS.md
-
