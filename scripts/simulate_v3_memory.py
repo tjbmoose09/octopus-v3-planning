@@ -20,6 +20,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 V2_ROOT = ROOT.parent
+if not (V2_ROOT / "PAPER.md").exists() and not (V2_ROOT / "config").exists():
+    V2_ROOT = ROOT
 RESULTS_DIR = ROOT / "results"
 RESULTS_JSON = RESULTS_DIR / "v3_memory_simulation_results.json"
 RESULTS_JSONL = RESULTS_DIR / "v3_memory_simulation_runs.jsonl"
@@ -100,6 +102,7 @@ def iter_source_files() -> list[Path]:
         "ROADMAP_ISSUES.md",
         "ANNOUNCEMENT.md",
         "docs",
+        "results",
         "config",
         "agents",
         "api",

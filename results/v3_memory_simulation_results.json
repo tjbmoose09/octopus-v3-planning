@@ -1,18 +1,18 @@
 {
-  "run_date": "2026-05-04 21:31:16 Eastern Daylight Time",
+  "run_date": "2026-05-04 22:21:21 Eastern Daylight Time",
   "corpus": {
     "root": "F:\\LLM Agents Mesh\\octopus-v2",
     "chunk_count": 380,
     "source_file_count": 27,
     "idf_terms": 8412,
-    "index_compile_ms": 27.35799999209121
+    "index_compile_ms": 28.489099990110844
   },
   "task_count": 8,
-  "elapsed_ms": 18.88150000013411,
+  "elapsed_ms": 18.248400010634214,
   "aggregate": {
     "v2_baseline": {
-      "mean_latency_ms": 0.358137498551514,
-      "median_latency_ms": 0.3282999969087541,
+      "mean_latency_ms": 0.3211000075680204,
+      "median_latency_ms": 0.301349995424971,
       "mean_active_tokens": 2717.125,
       "median_active_tokens": 2642.5,
       "mean_precision": 0.9583333333333334,
@@ -21,8 +21,8 @@
       "risk_hits": 0.0
     },
     "v3_sparse": {
-      "mean_latency_ms": 1.6362999958801083,
-      "median_latency_ms": 1.4834500034339726,
+      "mean_latency_ms": 1.5881375074968673,
+      "median_latency_ms": 1.42529999720864,
       "mean_active_tokens": 545.75,
       "median_active_tokens": 535.5,
       "mean_precision": 0.9375,
@@ -44,7 +44,7 @@
         "zone"
       ],
       "v2_baseline": {
-        "latency_ms": 0.5574000533670187,
+        "latency_ms": 0.5203000036999583,
         "active_tokens": 2651,
         "precision": 1.0,
         "selected_count": 24,
@@ -61,7 +61,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.562099962029606,
+        "latency_ms": 1.5421999851241708,
         "active_tokens": 563,
         "precision": 1.0,
         "selected_count": 5,
@@ -87,7 +87,7 @@
         "rest"
       ],
       "v2_baseline": {
-        "latency_ms": 0.3284999984316528,
+        "latency_ms": 0.3457000129856169,
         "active_tokens": 2627,
         "precision": 1.0,
         "selected_count": 24,
@@ -104,7 +104,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.4368999982252717,
+        "latency_ms": 1.4497999800369143,
         "active_tokens": 547,
         "precision": 1.0,
         "selected_count": 5,
@@ -128,7 +128,7 @@
         "stub"
       ],
       "v2_baseline": {
-        "latency_ms": 0.3053999971598387,
+        "latency_ms": 0.3097999724559486,
         "active_tokens": 2611,
         "precision": 1.0,
         "selected_count": 24,
@@ -146,7 +146,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 2.3587000323459506,
+        "latency_ms": 2.441300021018833,
         "active_tokens": 467,
         "precision": 1.0,
         "selected_count": 5,
@@ -172,7 +172,7 @@
         "servers"
       ],
       "v2_baseline": {
-        "latency_ms": 0.24099997244775295,
+        "latency_ms": 0.24020002456381917,
         "active_tokens": 2915,
         "precision": 1.0,
         "selected_count": 24,
@@ -190,7 +190,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.1647000210359693,
+        "latency_ms": 1.120000029914081,
         "active_tokens": 476,
         "precision": 1.0,
         "selected_count": 5,
@@ -216,7 +216,7 @@
         "web"
       ],
       "v2_baseline": {
-        "latency_ms": 0.41989999590441585,
+        "latency_ms": 0.3053999971598387,
         "active_tokens": 2720,
         "precision": 1.0,
         "selected_count": 24,
@@ -234,7 +234,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 2.450999978464097,
+        "latency_ms": 2.3185000172816217,
         "active_tokens": 562,
         "precision": 1.0,
         "selected_count": 5,
@@ -259,7 +259,7 @@
         "token"
       ],
       "v2_baseline": {
-        "latency_ms": 0.2759000053629279,
+        "latency_ms": 0.27460005367174745,
         "active_tokens": 2963,
         "precision": 0.6666666666666666,
         "selected_count": 24,
@@ -276,7 +276,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.2157000019215047,
+        "latency_ms": 1.1476000072434545,
         "active_tokens": 719,
         "precision": 0.5,
         "selected_count": 6,
@@ -301,7 +301,7 @@
         "skills"
       ],
       "v2_baseline": {
-        "latency_ms": 0.4088999703526497,
+        "latency_ms": 0.2972999936901033,
         "active_tokens": 2616,
         "precision": 1.0,
         "selected_count": 24,
@@ -319,7 +319,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.5300000086426735,
+        "latency_ms": 1.4008000143803656,
         "active_tokens": 508,
         "precision": 1.0,
         "selected_count": 5,
@@ -344,7 +344,7 @@
         "websocket"
       ],
       "v2_baseline": {
-        "latency_ms": 0.32809999538585544,
+        "latency_ms": 0.27550000231713057,
         "active_tokens": 2634,
         "precision": 1.0,
         "selected_count": 24,
@@ -361,7 +361,7 @@
         ]
       },
       "v3_sparse": {
-        "latency_ms": 1.371299964375794,
+        "latency_ms": 1.2849000049754977,
         "active_tokens": 524,
         "precision": 1.0,
         "selected_count": 5,

@@ -1,5 +1,8 @@
 # Octopus V3 Upgrade Planning
 
+[![V3 Planning CI](https://github.com/tjbmoose09/octopus-v3-planning/actions/workflows/ci.yml/badge.svg)](https://github.com/tjbmoose09/octopus-v3-planning/actions/workflows/ci.yml)
+[![Secret and State Scan](https://github.com/tjbmoose09/octopus-v3-planning/actions/workflows/secret-scan.yml/badge.svg)](https://github.com/tjbmoose09/octopus-v3-planning/actions/workflows/secret-scan.yml)
+
 Public upgrade guide for moving **Octopus Agents V2.2** toward the V3 data-plane architecture: sparse memory, safer context compilation, faster prompt construction, and benchmark-driven algorithm selection.
 
 This repository is not a drop-in replacement for `octopus-v2` yet. It is the public planning and benchmark packet people can pull before implementing the V3 branch.

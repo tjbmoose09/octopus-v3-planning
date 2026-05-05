@@ -1,6 +1,6 @@
 # V3 Memory/Data-Plane Simulation Results
 
-Run date: 2026-05-04 21:31:16 Eastern Daylight Time
+Run date: 2026-05-04 22:21:21 Eastern Daylight Time
 
 ## What Was Simulated
 
@@ -13,14 +13,12 @@ This does not measure real LLM inference, model quality, GPU throughput, or prod
 
 No V2.3-specific paper was present in the local repo at simulation time, so the baseline uses the available V2.2 paper/docs and the current V2 code corpus as the V2.x reference.
 
-LM Studio was not reachable at `localhost:1234` during this run, so no live local-model replay was performed.
-
 ## Aggregate Result
 
 | Metric | V2.x broad baseline | V3 sparse compiler | Simulated change |
 |---|---:|---:|---:|
-| Mean retrieval latency | 0.358 ms | 1.636 ms | 356.9% slower |
-| Median retrieval latency | 0.328 ms | 1.483 ms | 351.9% slower |
+| Mean retrieval latency | 0.321 ms | 1.588 ms | 394.6% slower |
+| Median retrieval latency | 0.301 ms | 1.425 ms | 373.0% slower |
 | Mean active context | 2717.1 tokens | 545.8 tokens | 79.9% fewer tokens |
 | Median active context | 2642.5 tokens | 535.5 tokens | 79.7% fewer tokens |
 | Mean synthetic precision | 0.958 | 0.938 | 2.2% relative drop |

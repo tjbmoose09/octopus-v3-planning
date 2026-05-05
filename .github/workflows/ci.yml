@@ -1,0 +1,59 @@
+name: V3 Planning CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simulation-smoke:
+    name: Simulation smoke test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out V3 planning repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run dependency-free V3 simulation
+        run: python scripts/simulate_v3_memory.py
+
+      - name: Validate simulation outputs
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          result_path = Path("results/v3_memory_simulation_results.json")
+          report_path = Path("docs/SIMULATION_RESULTS.md")
+          assert result_path.exists(), "missing JSON simulation result"
+          assert report_path.exists(), "missing Markdown simulation report"
+
+          data = json.loads(result_path.read_text(encoding="utf-8"))
+          assert data["task_count"] >= 1, "simulation should include at least one task"
+          assert data["corpus"]["chunk_count"] >= 1, "simulation corpus should not be empty"
+
+          v2 = data["aggregate"]["v2_baseline"]
+          v3 = data["aggregate"]["v3_sparse"]
+          assert v3["mean_active_tokens"] < v2["mean_active_tokens"], (
+              "V3 sparse compiler should reduce active context tokens in the smoke benchmark"
+          )
+
+      - name: Upload simulation artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: v3-simulation-results
+          path: |
+            results/v3_memory_simulation_results.json
+            results/v3_memory_simulation_runs.jsonl
+            docs/SIMULATION_RESULTS.md
+
